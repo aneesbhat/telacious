@@ -615,10 +615,16 @@
 
     .offcanvas__brand .logo__text span:first-child {
       font-size: 0.98rem;
+      background: none;
+      -webkit-background-clip: unset;
+      background-clip: unset;
+      -webkit-text-fill-color: var(--dark);
+      color: var(--dark);
     }
 
     .offcanvas__brand .logo__text span:last-child {
       font-size: 0.62rem;
+      color: var(--accent-dark);
     }
 
     .offcanvas__close {
@@ -743,7 +749,7 @@
     .offcanvas__submenu a {
       padding: 0.6rem 1rem;
       font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.65);
+      color: var(--dark);
       border-radius: var(--radius-sm);
     }
 
@@ -751,19 +757,23 @@
       display: none;
     }
 
-    .offcanvas__submenu a:hover {
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--accent-light);
+    .offcanvas__submenu a:hover,
+    .offcanvas__submenu a:active,
+    .offcanvas__submenu a.active {
+      background: rgba(16, 185, 129, 0.08);
+      color: var(--accent-dark);
       transform: translateX(4px);
     }
 
     .offcanvas__submenu a i {
       width: 20px;
-      color: var(--accent-light);
+      color: var(--accent);
       opacity: 0.7;
     }
 
-    .offcanvas__submenu a:hover i {
+    .offcanvas__submenu a:hover i,
+    .offcanvas__submenu a:active i,
+    .offcanvas__submenu a.active i {
       opacity: 1;
     }
 
@@ -1059,6 +1069,21 @@
 
       .navbar.scrolled {
         height: 58px;
+      }
+
+      .logo__icon img {
+        width: 55px;
+        height: 55px;
+      }
+
+      .logo__text span:first-child {
+        font-size: 1.3rem;
+        margin-bottom: -6px;
+        margin-top: -2px;
+      }
+
+      .logo__text span:last-child {
+        font-size: 0.58rem;
       }
     }
 
@@ -2016,7 +2041,7 @@
       <ul class="nav-links" id="navLinks" role="list">
         <li><a href="index.html"><i class="fa-solid fa-house"></i><span class="nav-text">
               Home</span></a></li>
-        <li><a href="about.html"><i class="fa-solid fa-users"></i><span class="nav-text"> About Us</span></a></li>
+        <li><a href="about.html" class="active"><i class="fa-solid fa-users"></i><span class="nav-text"> About Us</span><span class="dot-indicator"></span></a></li>
         <li class="dropdown">
           <a href="packages.html" aria-haspopup="true" aria-expanded="false">
             <i class="fa-solid fa-suitcase-rolling"></i>
@@ -2038,10 +2063,10 @@
             </a>
           </div>
         </li>
-        <li><a href="contact.html" class="active"><i class="fa-solid fa-envelope"></i><span class="nav-text"> Contact
-              Us</span><span class="dot-indicator"></span></a>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i><span class="nav-text"> Contact
+              Us</span></a>
         </li>
-        <li><a href="packages.html" class="nav-cta"><i class="fa-solid fa-paper-plane"></i><span class="nav-text"> Book
+        <li><a href="#" class="nav-cta btn--book" onclick="openPopup(); return false;"><i class="fa-solid fa-paper-plane"></i><span class="nav-text"> Book
               Now</span></a></li>
       </ul>
 
@@ -2084,7 +2109,7 @@
         <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
         Home
       </a>
-      <a href="about.html" onclick="closeCanvas()">
+      <a href="about.html" class="active" onclick="closeCanvas()">
         <span class="nav-icon"><i class="fa-solid fa-users"></i></span>
         About Us
       </a>
@@ -2107,13 +2132,13 @@
           <a href="packages.html#ladakh" onclick="closeCanvas()">
             <i class="fa-solid fa-motorcycle"></i> Ladakh
           </a>
-          <a href="packages.html" onclick="closeCanvas()" style="color:var(--white);">
+          <a href="packages.html" onclick="closeCanvas()">
             <i class="fa-solid fa-arrow-right"></i> View All Packages
           </a>
         </div>
       </div>
 
-      <a href="contact.html" class="active" onclick="closeCanvas()">
+      <a href="contact.html" onclick="closeCanvas()">
         <span class="nav-icon"><i class="fa-solid fa-envelope"></i></span>
         Contact Us
       </a>
@@ -2121,7 +2146,7 @@
 
     <!-- CTA -->
     <div class="offcanvas__cta">
-      <a href="packages.html" onclick="closeCanvas()">
+      <a href="#" onclick="closeCanvas(); openPopup(); return false;">
         <i class="fa-solid fa-paper-plane"></i>
         Book Your Journey
       </a>
