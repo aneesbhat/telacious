@@ -18,9 +18,12 @@
   <!-- Flatpickr CSS (Dark Theme) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
   <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css" />
+  
+  <!-- Flatpickr Script -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   <!-- Model Viewer Script -->
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
 
   <style>
     /* ============================================================
@@ -1235,6 +1238,7 @@
 
     .form-group .input-icon-wrapper input {
       padding-right: 2.8rem;
+      width: 100%;
     }
 
     .input-icon-wrapper i {
@@ -1829,6 +1833,69 @@
         height: 48px;
         font-size: 1.3rem;
       }
+
+      /* Navbar Logo Mobile Fix */
+      .logo__icon img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .logo__text span:first-child {
+        font-size: 1.5rem;
+      }
+
+      .logo__text span:last-child {
+        font-size: 0.6rem;
+      }
+
+      /* Contact Page Mobile Fixes */
+      .contact-page {
+        padding: calc(var(--nav-height-mobile, 64px) + 2rem) 1.2rem 4rem;
+      }
+      
+      .contact-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .contact-form-wrapper {
+        padding: 2rem 1.2rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .popup-brand-name {
+        font-size: 1.4rem !important;
+      }
+
+      .popup-discount-btn {
+        font-size: 0.9rem !important;
+        padding: 0.75rem !important;
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .info-card {
+        padding: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+
+      .info-card i {
+        font-size: 1.5rem;
+        width: auto;
+      }
+
+      .info-details h3 {
+        font-size: 1rem;
+      }
+
+      .info-details p {
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
@@ -2279,7 +2346,4 @@
   </div>
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
-
 </html>

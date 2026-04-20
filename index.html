@@ -2582,6 +2582,11 @@
       .packages-grid {
         grid-template-columns: 1fr;
       }
+
+      .form-row:has(#popDate) > .form-group:first-child,
+      .form-row:has(#inlineDate) > .form-group:first-child {
+        grid-column: 1 / -1;
+      }
     }
   </style>
 </head>
