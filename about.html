@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Telacious Tour & Travels – Explore the world with our handcrafted travel packages. Unforgettable journeys await you." />
-  <title>Contact Us - Telacious Tour & Travels</title>
+  <title>About Us - Telacious Tour & Travels</title>
 
   <!-- Google Fonts -->
   <link
@@ -1130,15 +1130,42 @@
       opacity: 1;
       transform: none;
       position: relative;
-      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
-      border-radius: 20px;
-      padding: 3rem 2.5rem;
-      box-shadow: 0 15px 35px rgba(16, 185, 129, 0.08), 0 5px 15px rgba(0, 0, 0, 0.04);
+      background: var(--white);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
       color: var(--dark);
-      border: 2px solid rgba(52, 211, 153, 0.4);
+      border: 1px solid rgba(0, 0, 0, 0.06);
     }
 
+    /* Neon Border SVG */
+    .popup-border {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+      overflow: visible;
+    }
 
+    /* Moving Neon Rod Effect */
+    .popup-border rect {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: #10B981; /* Emerald */
+      stroke-width: 3;
+      stroke-dasharray: 120 480; /* Rod length and gap */
+      rx: 16;
+      filter: drop-shadow(0 0 8px #10B981);
+      animation: neonRod 4s linear infinite;
+    }
+
+    @keyframes neonRod {
+      from { stroke-dashoffset: 600; }
+      to { stroke-dashoffset: 0; }
+    }
 
     /* Popup Content */
     .popup-header {
@@ -1194,36 +1221,29 @@
     .form-group label {
       font-size: 0.85rem;
       font-weight: 800;
-      color: var(--accent-dark);
+      color: var(--dark);
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
     .form-group input,
     .form-group textarea {
-      background: var(--white);
-      border: 1px solid #d1d5db; /* Accessible grey border */
-      border-radius: 12px;
+      background: #f9fafb;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
       color: var(--dark);
       font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      padding: 0.9rem 1rem; /* Highly engaging size */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .form-group input:hover,
-    .form-group textarea:hover {
-      border-color: #9ca3af;
+      font-size: 0.95rem;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+      transition: all 0.3s ease;
     }
 
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: var(--primary); /* Vibrant focus ring */
+      border-color: var(--accent);
       background: #ffffff;
-      box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15), 0 2px 4px rgba(0, 0, 0, 0.02);
-      transform: translateY(-1px);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02), 0 0 10px rgba(16, 185, 129, 0.15);
     }
 
     .input-icon-wrapper {
@@ -1284,17 +1304,11 @@
     .number-input {
       display: flex;
       align-items: center;
-      background: var(--white);
-      border: 1px solid #d1d5db;
-      border-radius: 12px;
+      background: #f9fafb;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: var(--radius-sm);
       overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .number-input:focus-within {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
     }
 
     .number-btn {
@@ -1423,93 +1437,218 @@
       }
     }
 
-    @keyframes float {
-      0% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-15px) rotate(5deg); }
-      100% { transform: translateY(0px) rotate(0deg); }
-    }
-
     /* ============================================================
-       CONTACT PAGE STYLES
+       ABOUT PAGE STYLES
     ============================================================ */
-    .contact-page {
-      padding: calc(var(--nav-height-desktop, 80px) + 4rem) 2rem 6rem;
-      width: 100%;
-      background: linear-gradient(150deg, #ecfdf5 0%, #f8fafc 100%);
+    .about-page {
+      padding: 0;
       color: var(--dark);
       min-height: calc(100vh - 300px);
-    }
-    
-    .contact-inner {
-      max-width: 1200px;
-      margin: 0 auto;
+      padding-bottom: 6rem;
     }
 
-    .contact-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .contact-header h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      color: var(--accent-light);
-    }
-
-    .contact-header p {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-    }
-
-    .contact-container {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 3rem;
-      align-items: stretch;
-    }
-
-    .contact-info {
+    .about-hero {
+      position: relative;
+      height: 60vh;
+      min-height: 400px;
       display: flex;
-      flex-direction: column;
-      height: 100%;
-      gap: 1.5rem;
-    }
-
-    .info-card {
-      background: var(--white);
-      border: 1px solid rgba(0, 0, 0, 0.06);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
-      padding: 2rem;
-      border-radius: var(--radius-md);
-      display: flex;
-      flex: 1;
       align-items: center;
-      gap: 1.5rem;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .info-card:hover {
-      transform: translateX(10px);
-      border-color: var(--accent);
-      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
-    }
-
-    .info-card i {
-      font-size: 2rem;
-      color: var(--accent-light);
-      width: 45px;
+      justify-content: center;
       text-align: center;
-      flex-shrink: 0;
+      color: var(--white);
+      background: url('https://images.unsplash.com/photo-1652204597589-962156b9483d?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
     }
 
-    .info-details h3 {
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(13, 27, 42, 0.5); /* Smooth overlay */
+    }
+
+    .about-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 2rem;
+    }
+
+    .about-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .about-hero p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .about-container {
+      max-width: 1200px;
+      margin: -4rem auto 0;
+      background: var(--white);
+      border-radius: 16px;
+      padding: 4rem;
+      position: relative;
+      z-index: 10;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    }
+
+    .section-title {
       font-family: 'Cinzel', serif;
-      font-size: 1.1rem;
-      margin-bottom: 0.3rem;
-      color: var(--accent-light);
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
     }
 
+    .about-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      text-align: center;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .goals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .goal-card {
+      background: #f9fafb;
+      padding: 2.5rem;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid rgba(0,0,0,0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .goal-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.1);
+      border-color: var(--accent-light);
+    }
+
+    .goal-card i {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .goal-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+
+    .goal-card p {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Tabs Styling */
+    .tabs-container {
+      margin-top: 4rem;
+    }
+
+    .tabs-header {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 1rem;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0.5rem 1.5rem;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -18px; /* reach the border-bottom */
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .tab-btn:hover {
+      color: var(--primary);
+    }
+
+    .tab-btn.active {
+      color: var(--accent);
+    }
+
+    .tab-btn.active::after {
+      transform: scaleX(1);
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-inner-box {
+      background: var(--light);
+      padding: 3rem;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        margin-top: 0;
+        border-radius: 0;
+        padding: 2rem 1.5rem;
+      }
+      .tabs-header {
+        flex-direction: column;
+        align-items: center;
+      }
+      .tab-btn::after {
+        display: none;
+      }
+      .tab-btn {
+        width: 100%;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+      }
+      .tab-btn.active {
+        background: var(--accent);
+        color: var(--white);
+        border-color: var(--accent);
+      }
+    }
     .info-details p {
       font-size: 0.95rem;
       color: var(--text-muted);
@@ -2000,118 +2139,137 @@
   <!-- =========================================================
        HERO SECTION
   ========================================================== -->
-  <main class="contact-page">
-    <div class="contact-inner">
-    <div class="contact-header">
-      <h1>Get in Touch</h1>
-      <p>We're here to help you plan your next unforgettable journey.</p>
+    <main class="about-page">
+    <div class="about-hero">
+      <div class="about-hero-content">
+        <h1>Crafting Your Perfect Journey</h1>
+        <p>At Telacious Tour & Travels, we believe that traveling is more than just visiting places; it's about experiencing the world in its truest form.</p>
+      </div>
     </div>
 
-    <div class="contact-container">
-      <!-- Info Left Column -->
-      <div class="contact-info">
-        <div class="info-card">
-          <i class="fa-solid fa-phone"></i>
-          <div class="info-details">
-            <h3>Phone Numbers</h3>
-            <p>+91 98765 43210</p>
-            <p>+91 91234 56789</p>
-          </div>
+    <div class="about-container">
+      <div class="about-content-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem;">
+        <div class="about-text-content">
+          <h2 class="section-title" style="text-align: left;">Who We Are & Our Journey</h2>
+          <p class="about-text" style="text-align: left; margin-left: 0; margin-bottom: 1.5rem;">
+            Born from a profound love for the majestic landscapes of Kashmir, <strong>Telacious Tour & Travels</strong> started as a small, passionate team of local explorers. Today, we stand as a premier travel agency dedicated to curating bespoke, luxury, and culturally immersive journeys.
+          </p>
+          <p class="about-text" style="text-align: left; margin-left: 0;">
+            We believe that every traveler seeks a unique story. Whether it's the serene Dal Lake, the spiritual heights of Vaishno Devi, or the rugged terrains of Ladakh, our itineraries are hand-crafted to reveal the unseen beauty of these regions. Our deep-rooted local connections allow us to provide experiences that go far beyond standard tourist trails.
+          </p>
         </div>
-        <div class="info-card">
-          <i class="fa-solid fa-envelope"></i>
-          <div class="info-details">
-            <h3>Email Address</h3>
-            <p>info@telacioustour.com</p>
-            <p>support@telacioustour.com</p>
-          </div>
-        </div>
-        <div class="info-card">
-          <i class="fa-solid fa-clock"></i>
-          <div class="info-details">
-            <h3>Working Hours</h3>
-            <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
-            <p>Sunday: Closed</p>
-          </div>
-        </div>
-        <div class="info-card">
-          <i class="fa-solid fa-location-dot"></i>
-          <div class="info-details">
-            <h3>Address</h3>
-            <p>Srinagar, Kashmir, 190001</p>
+        <div class="about-image-content" style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1626014903706-5b4105ebcdfa?q=80&w=800&auto=format&fit=crop" alt="Scenic Kashmir Valley" style="border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); width: 100%; height: 400px; object-fit: cover;">
+          <div style="position: absolute; bottom: -20px; left: -20px; background: var(--white); padding: 1.5rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <div style="font-family: 'Cinzel', serif; font-size: 2rem; color: var(--primary); font-weight: bold; line-height: 1;">10+</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Years of Excellence</div>
           </div>
         </div>
       </div>
 
-      <!-- Form Right Column -->
-      <div class="contact-form-wrapper" style="width: 100%;">
-
-
-        <div id="popupContent">
-          <div class="popup-header" style="gap: 1.5rem; margin-bottom: 2rem; width: 100%; align-items: stretch; text-align: center;">
-            <div class="popup-brand-name" style="font-size: 1.8rem; margin-top: 0.5rem;">Telacious Tour &amp; Travels</div>
-            <div class="popup-discount-btn" style="background: linear-gradient(135deg, #0EA5E9, #0284C7); color: var(--white); padding: 0.9rem 1rem; border-radius: 12px; font-weight: 700; font-size: 1.05rem; box-shadow: 0 6px 20px rgba(14, 165, 233, 0.3); display: flex; align-items: center; justify-content: center; gap: 0.5rem; transition: transform 0.3s ease;">
-              <i class="fa-solid fa-gift"></i>
-              Claim 20% OFF Your First Booking!
-            </div>
-          </div>
-
-          <form class="popup-form" id="bookingForm" autocomplete="off">
-            <!-- Anti-spam Honeypot -->
-            <div aria-hidden="true" style="position: absolute; left: -9999px;">
-              <label for="faxOnly">Fax Only</label>
-              <input type="text" id="faxOnly" name="faxOnly" tabindex="-1" autocomplete="off" />
-            </div>
-
-            <div class="form-group">
-              <label>Full Name</label>
-              <input type="text" id="popName" placeholder="Enter your full name" autocomplete="off" required />
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" id="popPhone" placeholder="Enter phone number" required />
-              </div>
-              <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" id="popEmail" placeholder="Enter email address" required />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Travel Date</label>
-                <div class="input-icon-wrapper">
-                  <input type="text" id="popDate" placeholder="Select travel date" autocomplete="off" required />
-                  <i class="fa-solid fa-calendar-days"></i>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Travelers</label>
-                <div class="number-input">
-                  <button type="button" class="number-btn" id="btnMinus" aria-label="Decrease"><i
-                      class="fa-solid fa-minus"></i></button>
-                  <input type="number" id="popTravelers" value="2" min="1" readonly required />
-                  <button type="button" class="number-btn" id="btnPlus" aria-label="Increase"><i
-                      class="fa-solid fa-plus"></i></button>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Special Requests / Message</label>
-              <textarea id="popMessage" rows="2" placeholder="Tell us about your trip preferences..."></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Confirm Booking Inquiry</button>
-          </form>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; background: var(--dark); border-radius: 16px; padding: 3rem; margin-top: 2rem; margin-bottom: 5rem; color: var(--white); box-shadow: 0 20px 40px rgba(0,0,0,0.1); position: relative; z-index: 10;">
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: bold; color: var(--primary-light); margin-bottom: 0.5rem; font-family: 'Cinzel', serif; text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);">50K+</div>
+          <div style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.7);">Happy Travelers</div>
         </div>
-
-        <div class="popup-success" id="popupSuccess">
-          <i class="fa-solid fa-shield-check"></i>
-          <h3>Booking Received, <span id="successName">Traveler</span>!</h3>
-          <p>Your inquiry is completely secure.</p>
-          <p>Our team at <strong>Telacious Tour & Travels</strong> is reviewing your requested date and will reach out to you shortly.</p>
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: bold; color: var(--accent-light); margin-bottom: 0.5rem; font-family: 'Cinzel', serif; text-shadow: 0 0 10px rgba(52, 211, 153, 0.4);">120+</div>
+          <div style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.7);">Destinations</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: bold; color: #FBBF24; margin-bottom: 0.5rem; font-family: 'Cinzel', serif; text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);">10</div>
+          <div style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.7);">Years Experience</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: bold; color: var(--primary-light); margin-bottom: 0.5rem; font-family: 'Cinzel', serif; text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);">15+</div>
+          <div style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.7);">Travel Awards</div>
         </div>
       </div>
-    </div>
+
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 class="section-title">Our Core Goals</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Everything we do is driven by three fundamental principles designed to elevate your travel experience.</p>
+      </div>
+      
+      <div class="goals-grid">
+        <div class="goal-card">
+          <i class="fa-solid fa-gem"></i>
+          <h3>Unmatched Excellence</h3>
+          <p>Delivering premium, high-quality services and unparalleled comfort. From 5-star accommodations to seamless logistics, we handle the details so you can focus on the luxury of the moment.</p>
+        </div>
+        <div class="goal-card">
+          <i class="fa-solid fa-leaf"></i>
+          <h3>Sustainable Travel</h3>
+          <p>We are deeply committed to eco-friendly tourism. We partner with local artisans, minimize our carbon footprint, and ensure our tours protect the pristine environments we visit.</p>
+        </div>
+        <div class="goal-card">
+          <i class="fa-solid fa-heart"></i>
+          <h3>Absolute Satisfaction</h3>
+          <p>Your smile is our greatest reward. We assign dedicated 24/7 travel concierges to every guest, ensuring personalized attention and rapid support throughout your journey.</p>
+        </div>
+      </div>
+
+      <div class="tabs-container">
+        <div class="tabs-header">
+          <button class="tab-btn active" data-tab="achievements">Our Achievements</button>
+          <button class="tab-btn" data-tab="team">Our Team</button>
+          <button class="tab-btn" data-tab="vision">Our Vision</button>
+        </div>
+
+        <div class="tab-content active" id="achievements">
+          <div class="tab-inner-box" style="display: flex; gap: 3rem; align-items: center;">
+            <div style="flex: 1;">
+              <h3 style="color:var(--primary); margin-bottom: 1.5rem; font-family:'Cinzel', serif; font-size: 1.8rem;">Milestones Reached</h3>
+              <p style="color:var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+                Over the past decade, Telacious Tour & Travels has successfully guided over <strong>50,000+ happy travelers</strong> across Kashmir, Ladakh, and Katra. We don't just sell tours; we forge lifelong memories.
+              </p>
+              <ul style="list-style: none; padding: 0; color: var(--dark); line-height: 2;">
+                <li><i class="fa-solid fa-check-circle" style="color: var(--accent); margin-right: 10px;"></i> 'Best Regional Travel Operator' - 3 Consecutive Years</li>
+                <li><i class="fa-solid fa-check-circle" style="color: var(--accent); margin-right: 10px;"></i> Featured in top travel magazines for Eco-Tourism</li>
+                <li><i class="fa-solid fa-check-circle" style="color: var(--accent); margin-right: 10px;"></i> 99% Customer Satisfaction rate based on post-trip surveys</li>
+              </ul>
+            </div>
+            <div style="flex: 1; display: flex; justify-content: flex-end;">
+                <img src="https://images.unsplash.com/photo-1551806235-a05ff358bbd8?q=80&w=600&auto=format&fit=crop" alt="Achievement Celebration" style="border-radius: 12px; max-width: 100%; height: 280px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="team">
+          <div class="tab-inner-box" style="display: flex; gap: 3rem; align-items: center; flex-direction: row-reverse;">
+            <div style="flex: 1;">
+              <h3 style="color:var(--primary); margin-bottom: 1.5rem; font-family:'Cinzel', serif; font-size: 1.8rem;">Meet The Experts</h3>
+              <p style="color:var(--text-muted); line-height: 1.8;">
+                Our diverse team consists of certified travel consultants, experienced local guides, elite transport experts, and 24/7 customer support agents. We are travelers designing for travelers.
+              </p>
+              <p style="color:var(--text-muted); line-height: 1.8; margin-top: 1rem;">
+                From the moment you start planning your trip to the time you board your flight back home, our specialists work relentlessly behind the scenes to guarantee everything runs flawlessly.
+              </p>
+            </div>
+            <div style="flex: 1;">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop" alt="Our Team" style="border-radius: 12px; max-width: 100%; height: 280px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="vision">
+          <div class="tab-inner-box" style="display: flex; gap: 3rem; align-items: center;">
+            <div style="flex: 1;">
+              <h3 style="color:var(--primary); margin-bottom: 1.5rem; font-family:'Cinzel', serif; font-size: 1.8rem;">Looking Ahead</h3>
+              <p style="color:var(--text-muted); line-height: 1.8;">
+                We envision expanding our bespoke services globally, while fiercely retaining the warm, personalized charm that characterizes a true Telacious journey. 
+              </p>
+              <p style="color:var(--text-muted); line-height: 1.8; margin-top: 1rem;">
+                By aggressively embracing sustainable practices and integrating modern travel technology—like our seamless booking portals and immersive 3D previews—we aim to become India's foremost eco-luxury travel company.
+              </p>
+            </div>
+            <div style="flex: 1; display: flex; justify-content: flex-end;">
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=600&auto=format&fit=crop" alt="Travel Vision" style="border-radius: 12px; max-width: 100%; height: 280px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
 
@@ -2181,49 +2339,21 @@
     });
 
     document.addEventListener('DOMContentLoaded', () => {
-      // Initialize elegantly styled flatpickr calendar explicitly for this contact page
-      flatpickr("#popDate", {
-        altInput: true,
-        altFormat: "F j, Y",
-        dateFormat: "Y-m-d",
-        minDate: "today",
-        disableMobile: "true"
-      });
+      // Tab Switching Logic
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabContents = document.querySelectorAll('.tab-content');
 
-      // Travelers +/- Logic
-      const btnMinus = document.getElementById('btnMinus');
-      const btnPlus = document.getElementById('btnPlus');
-      const popTravelers = document.getElementById('popTravelers');
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all
+          tabBtns.forEach(b => b.classList.remove('active'));
+          tabContents.forEach(c => c.classList.remove('active'));
 
-      btnMinus.addEventListener('click', () => {
-        let val = parseInt(popTravelers.value) || 1;
-        if (val > 1) popTravelers.value = val - 1;
-      });
-
-      btnPlus.addEventListener('click', () => {
-        let val = parseInt(popTravelers.value) || 1;
-        popTravelers.value = val + 1;
-      });
-
-      // Form Submission Logic
-      const bookingForm = document.getElementById('bookingForm');
-      const popupContent = document.getElementById('popupContent');
-      const popupSuccess = document.getElementById('popupSuccess');
-
-      bookingForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        // Honeypot anti-spam check
-        const honeypot = document.getElementById('faxOnly').value;
-        if (honeypot) return; // Silently fail for bots without alarming them
-
-        const name = document.getElementById('popName').value;
-
-        // Hide form contents, show success state securely
-        popupContent.style.display = 'none';
-        popupSuccess.style.display = 'flex';
-
-        document.getElementById('successName').textContent = name || 'Traveler';
+          // Add active class to clicked
+          btn.classList.add('active');
+          const targetId = btn.getAttribute('data-tab');
+          document.getElementById(targetId).classList.add('active');
+        });
       });
     });
 
