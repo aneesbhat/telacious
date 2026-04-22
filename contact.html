@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Telacious Tour & Travels – Explore the world with our handcrafted travel packages. Unforgettable journeys await you." />
+    content="Telacious Tour & Travels â€“ Explore the world with our handcrafted travel packages. Unforgettable journeys await you." />
   <title>Contact Us - Telacious Tour & Travels</title>
 
   <!-- Google Fonts -->
@@ -27,7 +27,7 @@
 
   <style>
     /* ============================================================
-       CSS CUSTOM PROPERTIES – Brand Color System
+       CSS CUSTOM PROPERTIES â€“ Brand Color System
     ============================================================ */
     :root {
       --primary: #0EA5E9;
@@ -252,7 +252,7 @@
     .logo__text {
       display: flex;
       flex-direction: column;
-      line-height: 1.2;
+      line-height: 1.1;
     }
 
     .logo__text span:first-child {
@@ -265,7 +265,8 @@
       -webkit-text-fill-color: transparent;
       letter-spacing: 0;
       text-transform: none;
-      margin-bottom: -5px;
+      white-space: nowrap;
+      margin-bottom: 0;
       margin-top: 0;
     }
 
@@ -276,6 +277,7 @@
       color: var(--accent-light);
       letter-spacing: 0.14em;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     /* ---- Desktop Nav Links ---- */
@@ -301,7 +303,7 @@
       transition: color 0.28s ease, letter-spacing 0.28s ease, transform 0.28s ease;
     }
 
-    /* Glow pill background – slides up from bottom */
+    /* Glow pill background â€“ slides up from bottom */
     .nav-links a::before {
       content: '';
       position: absolute;
@@ -596,38 +598,50 @@
       justify-content: space-between;
       padding: 1.25rem 1.5rem 1rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      gap: 0.5rem;
     }
 
     .offcanvas__brand {
       display: flex;
       align-items: center;
       gap: 0.65rem;
+      min-width: 0;
+      flex: 1;
     }
 
     .offcanvas__brand .logo__icon {
       width: 38px;
       height: 38px;
       font-size: 1.1rem;
+      flex-shrink: 0;
     }
 
     .offcanvas__brand .logo__text {
       display: flex;
       flex-direction: column;
-      line-height: 1.1;
+      line-height: 1.2;
+      min-width: 0;
     }
 
     .offcanvas__brand .logo__text span:first-child {
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       background: none;
       -webkit-background-clip: unset;
       background-clip: unset;
       -webkit-text-fill-color: var(--dark);
       color: var(--dark);
+      font-family: 'Great Vibes', cursive;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .offcanvas__brand .logo__text span:last-child {
-      font-size: 0.62rem;
+      font-size: 0.6rem;
       color: var(--accent-dark);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .offcanvas__close {
@@ -1081,8 +1095,8 @@
 
       .logo__text span:first-child {
         font-size: 1.3rem;
-        margin-bottom: -6px;
-        margin-top: -2px;
+        margin-bottom: 0;
+        margin-top: 0;
       }
 
       .logo__text span:last-child {
@@ -1928,7 +1942,7 @@
 <body>
 
   <!-- =========================================================
-       OVERLAY – off-canvas backdrop
+       OVERLAY â€“ off-canvas backdrop
   ========================================================== -->
   <div class="overlay" id="overlay" aria-hidden="true"></div>
 
@@ -1951,7 +1965,7 @@
     <div class="navbar__inner">
 
       <!-- Logo -->
-      <a href="index.html" class="logo" aria-label="Telacious Tour & Travels – Home">
+      <a href="index.html" class="logo" aria-label="Telacious Tour & Travels â€“ Home">
         <div class="logo__icon" aria-hidden="true">
           <img src="images/logo without bg.png" alt="Telacious Tour & Travels">
         </div>
@@ -1973,15 +1987,15 @@
             <i class="fa-solid fa-chevron-down"></i>
           </a>
           <div class="dropdown-menu">
-            <a href="packages.html#kashmir" class="dropdown-item">
+            <a href="kashmir.html" class="dropdown-item">
               <i class="fa-solid fa-mountain-sun"></i>
               <span class="nav-text">Kashmir</span>
             </a>
-            <a href="packages.html#katra" class="dropdown-item">
+            <a href="katra.html" class="dropdown-item">
               <i class="fa-solid fa-vihara"></i>
               <span class="nav-text">Katra</span>
             </a>
-            <a href="packages.html#ladakh" class="dropdown-item">
+            <a href="ladakh.html" class="dropdown-item">
               <i class="fa-solid fa-motorcycle"></i>
               <span class="nav-text">Ladakh</span>
             </a>
@@ -2047,13 +2061,13 @@
           <i class="fa-solid fa-chevron-down chevron"></i>
         </a>
         <div class="offcanvas__submenu">
-          <a href="packages.html#kashmir" onclick="closeCanvas()">
+          <a href="kashmir.html" onclick="closeCanvas()">
             <i class="fa-solid fa-mountain-sun"></i> Kashmir
           </a>
-          <a href="packages.html#katra" onclick="closeCanvas()">
+          <a href="katra.html" onclick="closeCanvas()">
             <i class="fa-solid fa-vihara"></i> Katra
           </a>
-          <a href="packages.html#ladakh" onclick="closeCanvas()">
+          <a href="ladakh.html" onclick="closeCanvas()">
             <i class="fa-solid fa-motorcycle"></i> Ladakh
           </a>
           <a href="packages.html" onclick="closeCanvas()">
@@ -2336,15 +2350,15 @@
             <span>&amp; Travels</span>
           </div>
         </a>
-        <p>&ldquo;Not all those who wander are lost &mdash; some are just discovering the world’s finest moments with
+        <p>&ldquo;Not all those who wander are lost &mdash; some are just discovering the worldâ€™s finest moments with
           us.&rdquo;</p>
       </div>
       <div class="footer__links">
         <h3>Quick Links</h3>
-        <a href="#"><i class="fa-solid fa-shield"></i> Privacy Policy</a>
-        <a href="#"><i class="fa-solid fa-file-contract"></i> Terms and Conditions</a>
-        <a href="#"><i class="fa-solid fa-calendar-xmark"></i> Cancellation Policy</a>
-        <a href="#"><i class="fa-solid fa-money-bill-transfer"></i> Refund Policy</a>
+        <a href="privacy-policy.html"><i class="fa-solid fa-shield"></i> Privacy Policy</a>
+        <a href="terms-conditions.html"><i class="fa-solid fa-file-contract"></i> Terms and Conditions</a>
+        <a href="cancellation-policy.html"><i class="fa-solid fa-calendar-xmark"></i> Cancellation Policy</a>
+        <a href="refund-policy.html"><i class="fa-solid fa-money-bill-transfer"></i> Refund Policy</a>
       </div>
       <div class="footer__contact">
         <h3>Contact</h3>
@@ -2372,3 +2386,5 @@
 
 </body>
 </html>
+
+

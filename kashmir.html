@@ -2835,141 +2835,33 @@
 
   </aside>
 
-  <main>
-    <section class="hero" id="home" aria-labelledby="heroTitle">
-
-      <div class="hero__bg"></div>
-
-      <div class="hero__content">
-
-        <div class="hero__tag">
-          <i class="fa-solid fa-plane-departure"></i>
-          Explore the Unexplored
-        </div>
-
-        <h1 class="hero__title" id="heroTitle">
-          Explore the World<br />
-          with <span class="highlight">Telacious</span>
-        </h1>
-
-        <p class="hero__quote" role="doc-subtitle">
-          &ldquo;Not all those who <strong>wander</strong> are lost &mdash;
-          some are just <strong>discovering</strong> the world&rsquo;s finest moments with us.&rdquo;
-        </p>
-
-        <div class="hero__info-bar">
-          <div class="hero__info-item">
-            <span class="rating-val">4.9</span>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
-            </div>
-          </div>
-          <div class="hero__separator"></div>
-          <div class="hero__info-item">
-            <i class="fa-solid fa-users-viewfinder main-icon"></i>
-            <div class="info-text">
-              <span>5000+</span>
-              <span>Travellers</span>
-            </div>
-          </div>
-          <div class="hero__separator"></div>
-          <div class="hero__info-item">
-            <i class="fa-solid fa-headset main-icon"></i>
-            <div class="info-text">
-              <span>24/7</span>
-              <span>Customer Support</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero__actions">
-          <a href="packages.html" class="btn btn--primary">
-            <i class="fa-solid fa-suitcase-rolling"></i>
-            Explore Packages
-          </a>
-          <a href="about.html" class="btn btn--outline">
-            <i class="fa-solid fa-circle-info"></i>
-            About Us
-          </a>
-        </div>
-
-      </div>
-
-      <div class="scroll-hint" aria-hidden="true">
-        <span>Scroll</span>
-        <i class="fa-solid fa-chevron-down"></i>
-      </div>
-
+  <main>    <!-- Banner -->
+    <section class="page-banner" style="position:relative; background:url('images/kashmir_banner.jpg') no-repeat center center/cover; padding:8rem 2rem 6rem; text-align:center; color:white;">
+       <div style="position:absolute; inset:0; background:rgba(13, 27, 42, 0.7);"></div>
+       <div style="position:relative; z-index:2;">
+           <h1 style="font-family:'Cormorant Garamond', serif; font-size:4.5rem; margin-bottom:1rem; color:var(--accent-light); text-shadow: 0 4px 15px rgba(0,0,0,0.5);">Kashmir Packages</h1>
+           <p style="font-size:1.3rem; max-width:700px; margin:0 auto; opacity:0.95; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">Explore the breathtaking beauty of Kashmir securely with our premium itineraries and expert-guided journeys designed specifically for your perfect escape.</p>
+       </div>
     </section>
-  </main>
 
-  <!-- =========================================================
-       WHY CHOOSE TELACIOUS
-  ========================================================== -->
-  <section class="section-padding why-choose">
-    <div class="section-header">
-      <h2>Why Choose Telacious?</h2>
-      <p>Experience seamless, premium, and expert-guided travel with us.</p>
-    </div>
-    <div class="why-choose__grid">
-      <div class="why-choose__card">
-        <div class="why-choose-icon-wrapper">
-          <i class="fa-solid fa-user-tie"></i>
-        </div>
-        <h3>Expert Guides</h3>
-        <p>Our certified local experts know the hidden gems that aren't on any map, ensuring an authentic journey.</p>
+    <!-- Filter and Grid -->
+    <section class="section-padding" style="background:var(--light);">
+      <div style="max-width:1200px; margin:0 auto 2.5rem; display:flex; flex-wrap:wrap; align-items:center; gap:1rem; background:var(--white); padding:1rem 2rem; border-radius:var(--radius-md); box-shadow:0 8px 30px rgba(0,0,0,0.03);">
+        <label for="priceFilter" style="font-weight:700; color:var(--dark); font-size:1.1rem;"><i class="fa-solid fa-filter" style="color:var(--accent); margin-right:0.5rem;"></i> Filter by Price:</label>
+        <select id="priceFilter" onchange="filterPackages()" style="padding:0.75rem 1.5rem; border-radius:var(--radius-sm); border:2px solid #e5e7eb; font-family:'Inter',sans-serif; background:var(--light); font-weight:600; color:var(--primary-dark); cursor:pointer; outline:none; transition:border-color var(--transition);">
+           <option value="all">- All Tour Packages -</option>
+           <option value="15000">Budget (Below Rs. 15,000)</option>
+           <option value="20000">Standard (Below Rs. 20,000)</option>
+           <option value="25000">Premium (Below Rs. 25,000)</option>
+           <option value="35000">Luxury (Below Rs. 35,000)</option>
+        </select>
       </div>
-      <div class="why-choose__card">
-        <div class="why-choose-icon-wrapper">
-          <i class="fa-solid fa-hand-holding-dollar"></i>
-        </div>
-        <h3>Best Price</h3>
-        <p>We offer premium experiences at competitive rates, with no hidden costs or surprise fees.</p>
-      </div>
-      <div class="why-choose__card">
-        <div class="why-choose-icon-wrapper">
-          <i class="fa-solid fa-map-location-dot"></i>
-        </div>
-        <h3>Personalized</h3>
-        <p>Every itinerary is tailored to your unique interests, pace, and preferred level of comfort.</p>
-      </div>
-      <div class="why-choose__card">
-        <div class="why-choose-icon-wrapper">
-          <i class="fa-solid fa-headset"></i>
-        </div>
-        <h3>24/7 Support</h3>
-        <p>Our dedicated support team is always available to assist you at every step of your adventure.</p>
-      </div>
-      <div class="why-choose__card">
-        <div class="why-choose-icon-wrapper">
-          <i class="fa-solid fa-shield-heart"></i>
-        </div>
-        <h3>Secure Travel</h3>
-        <p>Your safety and peace of mind are our top priorities, with full insurance and vetted partners.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- =========================================================
-       KASHMIR TOUR PACKAGES
-  ========================================================== -->
-  <section class="section-padding" id="packages">
-    <div class="section-header">
-      <h2>Kashmir Tour Packages</h2>
-      <p>Discover the "Paradise on Earth" with our meticulously crafted itineraries covering Srinagar, Gulmarg,
-        Pahalgam, and Sonamarg.</p>
-    </div>
-
-    <div class="packages-grid">
-      <!-- Card 1 -->
-      <article class="package-card">
+      <div class="packages-grid" id="packagesGrid">
+              <article class="package-card" data-price="18500">
         <div class="package-thumb">
           <span class="package-badge">Bestseller</span>
-          <img src="images/kashmir_paradise_discovery.png" alt="Dal Lake Houseboat">
+          <img src="images/kashmir_placeholder_1.jpg" alt="Kashmir Package 1" onerror="this.src='images/logo.png'">
           <div class="package-rating">
             <div class="stars">
               <i class="fa-solid fa-star"></i>
@@ -2978,76 +2870,37 @@
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <span class="review-count">1.2k+ reviews</span>
+            <span class="review-count">170 reviews</span>
           </div>
         </div>
         <div class="package-content">
-          <h3>Paradise Discovery</h3>
+          <h3>Kashmir Discovery 1</h3>
           <div class="package-meta">
-            <span><i class="fa-solid fa-clock"></i> 7 Days / 6 Nights</span>
-            <span><i class="fa-solid fa-location-dot"></i> Srinagar, Pahalgam, Gulmarg (2N)</span>
+            <span><i class="fa-solid fa-clock"></i> 3 Days / 2 Nights</span>
+            <span><i class="fa-solid fa-location-dot"></i> Top Attractions</span>
           </div>
           <div class="package-inclusions">
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-utensils"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-ship"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-car"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-water"></i></div>
+            <div class="inclusion-icon" title="Breakfast/Dinner"><i class="fa-solid fa-utensils"></i></div>
+            <div class="inclusion-icon" title="Premium Stay"><i class="fa-solid fa-hotel"></i></div>
+            <div class="inclusion-icon" title="Private Transfers"><i class="fa-solid fa-car"></i></div>
+            <div class="inclusion-icon" title="Sightseeing Guide"><i class="fa-solid fa-camera"></i></div>
           </div>
-          <div class="package-footer">
+          <div class="package-footer" style="padding-top:1.5rem; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
             <div class="package-price">
               <span class="price-label">Starts from</span>
-              <span class="price-value">₹28,500</span>
+              <span class="price-value">â‚¹18,500</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
+               <a href="tel:+919876543210" class="btn--book" style="background:var(--primary);"><i class="fa-solid fa-phone"></i> Call Now</a>
+               <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
           </div>
         </div>
-      </article>
-
-      <!-- Card 2 -->
-      <article class="package-card">
+      </article>      <article class="package-card" data-price="24000">
         <div class="package-thumb">
           <span class="package-badge">Trending</span>
-          <img src="images/kashmir_alpine_adventure.png" alt="Gulmarg Snow">
-          <div class="package-rating">
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
-            </div>
-            <span class="review-count">850 reviews</span>
-          </div>
-        </div>
-        <div class="package-content">
-          <h3>Alpine Adventure</h3>
-          <div class="package-meta">
-            <span><i class="fa-solid fa-clock"></i> 7 Days / 6 Nights</span>
-            <span><i class="fa-solid fa-location-dot"></i> Srinagar, Sonamarg, Pahalgam, Gulmarg</span>
-          </div>
-          <div class="package-inclusions">
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-utensils"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-cable-car"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-car"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-hotel"></i></div>
-          </div>
-          <div class="package-footer">
-            <div class="package-price">
-              <span class="price-label">Starts from</span>
-              <span class="price-value">₹26,999</span>
-              <span class="pax-count">per person</span>
-            </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="package-card">
-        <div class="package-thumb">
-          <span class="package-badge">Cultural</span>
-          <img src="images/kashmir_heritage_fields.png" alt="Saffron Fields">
+          <img src="images/kashmir_placeholder_2.jpg" alt="Kashmir Package 2" onerror="this.src='images/logo.png'">
           <div class="package-rating">
             <div class="stars">
               <i class="fa-solid fa-star"></i>
@@ -3056,55 +2909,37 @@
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <span class="review-count">420 reviews</span>
+            <span class="review-count">290 reviews</span>
           </div>
         </div>
         <div class="package-content">
-          <h3>Kashmir Heritage</h3>
+          <h3>Kashmir Discovery 2</h3>
           <div class="package-meta">
             <span><i class="fa-solid fa-clock"></i> 4 Days / 3 Nights</span>
-            <span><i class="fa-solid fa-location-dot"></i> Srinagar, Gulmarg, Houseboat</span>
+            <span><i class="fa-solid fa-location-dot"></i> Top Attractions</span>
           </div>
           <div class="package-inclusions">
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-utensils"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-person-walking"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-car"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-gift"></i></div>
+            <div class="inclusion-icon" title="Breakfast/Dinner"><i class="fa-solid fa-utensils"></i></div>
+            <div class="inclusion-icon" title="Premium Stay"><i class="fa-solid fa-hotel"></i></div>
+            <div class="inclusion-icon" title="Private Transfers"><i class="fa-solid fa-car"></i></div>
+            <div class="inclusion-icon" title="Sightseeing Guide"><i class="fa-solid fa-camera"></i></div>
           </div>
-          <div class="package-footer">
+          <div class="package-footer" style="padding-top:1.5rem; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
             <div class="package-price">
               <span class="price-label">Starts from</span>
-              <span class="price-value">₹15,999</span>
+              <span class="price-value">â‚¹24,000</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
+               <a href="tel:+919876543210" class="btn--book" style="background:var(--primary);"><i class="fa-solid fa-phone"></i> Call Now</a>
+               <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
           </div>
         </div>
-      </article>
-    </div>
-
-    <div class="view-all-wrap">
-      <a href="kashmir.html" class="btn-view-all">View All Kashmir Packages <i
-          class="fa-solid fa-chevron-right"></i></a>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       VAISHNO DEVI PACKAGES
-  ========================================================== -->
-  <section class="section-padding" style="background: var(--white);">
-    <div class="section-header">
-      <h2>Vaishno Devi Packages</h2>
-      <p>Embark on a spiritual journey to the holy shrine of Maa Vaishno Devi. We ensure a seamless experience with
-        priority darshan and comfortable transport.</p>
-    </div>
-
-    <div class="packages-grid">
-      <!-- Card 1 -->
-      <article class="package-card">
+      </article>      <article class="package-card" data-price="11500">
         <div class="package-thumb">
-          <span class="package-badge">Spiritual</span>
-          <img src="images/vaishno_devi_holy_darshan.png" alt="Vaishno Devi">
+          <span class="package-badge">Budget</span>
+          <img src="images/kashmir_placeholder_3.jpg" alt="Kashmir Package 3" onerror="this.src='images/logo.png'">
           <div class="package-rating">
             <div class="stars">
               <i class="fa-solid fa-star"></i>
@@ -3113,37 +2948,37 @@
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <span class="review-count">2.5k+ reviews</span>
+            <span class="review-count">410 reviews</span>
           </div>
         </div>
         <div class="package-content">
-          <h3>Holy Darshan</h3>
+          <h3>Kashmir Discovery 3</h3>
           <div class="package-meta">
-            <span><i class="fa-solid fa-clock"></i> 7 Days / 6 Nights</span>
-            <span><i class="fa-solid fa-location-dot"></i> Katra, Srinagar, Gulmarg, Pahalgam</span>
+            <span><i class="fa-solid fa-clock"></i> 5 Days / 4 Nights</span>
+            <span><i class="fa-solid fa-location-dot"></i> Top Attractions</span>
           </div>
           <div class="package-inclusions">
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-utensils"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-ticket"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-car"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-hotel"></i></div>
+            <div class="inclusion-icon" title="Breakfast/Dinner"><i class="fa-solid fa-utensils"></i></div>
+            <div class="inclusion-icon" title="Premium Stay"><i class="fa-solid fa-hotel"></i></div>
+            <div class="inclusion-icon" title="Private Transfers"><i class="fa-solid fa-car"></i></div>
+            <div class="inclusion-icon" title="Sightseeing Guide"><i class="fa-solid fa-camera"></i></div>
           </div>
-          <div class="package-footer">
+          <div class="package-footer" style="padding-top:1.5rem; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
             <div class="package-price">
               <span class="price-label">Starts from</span>
-              <span class="price-value">₹25,999</span>
+              <span class="price-value">â‚¹11,500</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
+               <a href="tel:+919876543210" class="btn--book" style="background:var(--primary);"><i class="fa-solid fa-phone"></i> Call Now</a>
+               <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
           </div>
         </div>
-      </article>
-
-      <!-- Card 2 (Duplicate for demo grid) -->
-      <article class="package-card">
+      </article>      <article class="package-card" data-price="31000">
         <div class="package-thumb">
-          <span class="package-badge">Premium</span>
-          <img src="images/vaishno_devi_helicopter.png" alt="Vaishno Devi Helicopter Yatra">
+          <span class="package-badge">Luxury</span>
+          <img src="images/kashmir_placeholder_4.jpg" alt="Kashmir Package 4" onerror="this.src='images/logo.png'">
           <div class="package-rating">
             <div class="stars">
               <i class="fa-solid fa-star"></i>
@@ -3152,591 +2987,123 @@
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <span class="review-count">1.1k reviews</span>
+            <span class="review-count">530 reviews</span>
           </div>
         </div>
         <div class="package-content">
-          <h3>Helicopter Yatra</h3>
+          <h3>Kashmir Discovery 4</h3>
           <div class="package-meta">
-            <span><i class="fa-solid fa-clock"></i> 6 Days / 5 Night</span>
-            <span><i class="fa-solid fa-location-dot"></i> Katra (2N), Gulmarg, Srinagar</span>
+            <span><i class="fa-solid fa-clock"></i> 6 Days / 5 Nights</span>
+            <span><i class="fa-solid fa-location-dot"></i> Top Attractions</span>
           </div>
           <div class="package-inclusions">
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-utensils"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-helicopter"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-car"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-hotel"></i></div>
+            <div class="inclusion-icon" title="Breakfast/Dinner"><i class="fa-solid fa-utensils"></i></div>
+            <div class="inclusion-icon" title="Premium Stay"><i class="fa-solid fa-hotel"></i></div>
+            <div class="inclusion-icon" title="Private Transfers"><i class="fa-solid fa-car"></i></div>
+            <div class="inclusion-icon" title="Sightseeing Guide"><i class="fa-solid fa-camera"></i></div>
           </div>
-          <div class="package-footer">
+          <div class="package-footer" style="padding-top:1.5rem; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
             <div class="package-price">
               <span class="price-label">Starts from</span>
-              <span class="price-value">₹18,999</span>
+              <span class="price-value">â‚¹31,000</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
+               <a href="tel:+919876543210" class="btn--book" style="background:var(--primary);"><i class="fa-solid fa-phone"></i> Call Now</a>
+               <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
           </div>
         </div>
-      </article>
-
-      <!-- Card 3 (Duplicate for demo grid) -->
-      <article class="package-card">
+      </article>      <article class="package-card" data-price="15000">
         <div class="package-thumb">
-          <span class="package-badge">Family</span>
-          <img src="images/vaishno_devi_shiv_khori.png" alt="Vaishno Devi Family Yatra">
+          <span class="package-badge">Standard</span>
+          <img src="images/kashmir_placeholder_5.jpg" alt="Kashmir Package 5" onerror="this.src='images/logo.png'">
           <div class="package-rating">
             <div class="stars">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-solid fa-star"></i>
             </div>
             <span class="review-count">650 reviews</span>
           </div>
         </div>
         <div class="package-content">
-          <h3>Shiv Khori Combo</h3>
+          <h3>Kashmir Discovery 5</h3>
           <div class="package-meta">
             <span><i class="fa-solid fa-clock"></i> 7 Days / 6 Nights</span>
-            <span><i class="fa-solid fa-location-dot"></i> Katra, Pahalgam, Srinagar, Gulmarg</span>
+            <span><i class="fa-solid fa-location-dot"></i> Top Attractions</span>
           </div>
           <div class="package-inclusions">
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-utensils"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-hands-praying"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-car"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-hotel"></i></div>
+            <div class="inclusion-icon" title="Breakfast/Dinner"><i class="fa-solid fa-utensils"></i></div>
+            <div class="inclusion-icon" title="Premium Stay"><i class="fa-solid fa-hotel"></i></div>
+            <div class="inclusion-icon" title="Private Transfers"><i class="fa-solid fa-car"></i></div>
+            <div class="inclusion-icon" title="Sightseeing Guide"><i class="fa-solid fa-camera"></i></div>
           </div>
-          <div class="package-footer">
+          <div class="package-footer" style="padding-top:1.5rem; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
             <div class="package-price">
               <span class="price-label">Starts from</span>
-              <span class="price-value">₹22,999</span>
+              <span class="price-value">â‚¹15,000</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="view-all-wrap">
-      <a href="katra.html" class="btn-view-all">View All Yatra Packages <i class="fa-solid fa-chevron-right"></i></a>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       LADAKH PACKAGES
-  ========================================================== -->
-  <section class="section-padding">
-    <div class="section-header">
-      <h2>Ladakh Packages</h2>
-      <p>Unleash your spirit of adventure in the land of high passes. Experience the raw beauty of Pangong Lake, Nubra
-        Valley, and Khardung La.</p>
-    </div>
-
-    <div class="packages-grid">
-      <!-- Card 1 -->
-      <article class="package-card">
-        <div class="package-thumb">
-          <span class="package-badge">Adventure</span>
-          <img src="images/ladakh_pangong_new.jpg" alt="Ladakh Pangong">
-          <div class="package-rating">
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
+               <a href="tel:+919876543210" class="btn--book" style="background:var(--primary);"><i class="fa-solid fa-phone"></i> Call Now</a>
+               <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <span class="review-count">3k+ reviews</span>
-          </div>
-        </div>
-        <div class="package-content">
-          <h3>Epic Ladakh Odyssey</h3>
-          <div class="package-meta">
-            <span><i class="fa-solid fa-clock"></i> 10 Days / 9 Nights</span>
-            <span><i class="fa-solid fa-location-dot"></i> Srinagar, Kargil, Nubra, Pangong Lake, Hanle, Tso Moriri,
-              Leh</span>
-          </div>
-          <div class="package-inclusions">
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-utensils"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-motorcycle"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-file-shield"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-tent"></i></div>
-          </div>
-          <div class="package-footer">
-            <div class="package-price">
-              <span class="price-label">Starts from</span>
-              <span class="price-value">₹36,999</span>
-              <span class="pax-count">per person</span>
-            </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
+      </div>
+      <div id="noResults" style="display:none; text-align:center; padding:5rem 2rem; color:var(--text-muted);">
+         <i class="fa-solid fa-magnifying-glass-location" style="font-size:4rem; color:var(--primary-light); margin-bottom:1rem; opacity:0.5;"></i>
+         <h3 style="font-size:1.5rem; color:var(--dark); margin-bottom:0.5rem;">No Packages Found</h3>
+         <p style="font-size:1.1rem;">Try adjusting your price filter to see more options.</p>
+      </div>
+    </section>
+  </main>
 
-      <!-- Card 2 -->
-      <article class="package-card">
-        <div class="package-thumb">
-          <span class="package-badge">Popular</span>
-          <img src="images/ladakh_nubra_new.jpg" alt="Ladakh Nubra Valley">
-          <div class="package-rating">
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
-            </div>
-            <span class="review-count">1.4k reviews</span>
-          </div>
-        </div>
-        <div class="package-content">
-          <h3>Valley of Flowers</h3>
-          <div class="package-meta">
-            <span><i class="fa-solid fa-clock"></i> 8 Days / 7 Nights</span>
-            <span><i class="fa-solid fa-location-dot"></i> Srinagar, Kargil, Leh, Nubra, Pangong, Turtuk</span>
-          </div>
-          <div class="package-inclusions">
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-utensils"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-car"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-lungs"></i></div>
-            <div class="inclusion-icon" title=""><i class="fa-solid fa-paw"></i></div>
-          </div>
-          <div class="package-footer">
-            <div class="package-price">
-              <span class="price-label">Starts from</span>
-              <span class="price-value">₹27,999</span>
-              <span class="pax-count">per person</span>
-            </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="package-card">
-        <div class="package-thumb">
-          <span class="package-badge">Exploration</span>
-          <img src="images/ladakh_mountains_new.jpg" alt="Ladakh Zanskar High Pass">
-          <div class="package-rating">
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <span class="review-count">900 reviews</span>
-          </div>
-        </div>
-        <div class="package-content">
-          <h3>Zanskar High Pass</h3>
-          <div class="package-meta">
-            <span><i class="fa-solid fa-clock"></i> 10 Days / 9 Nights</span>
-            <span><i class="fa-solid fa-location-dot"></i> Srinagar, Kargil, Leh, Nubra, Pangong</span>
-          </div>
-          <div class="package-inclusions">
-            <div class="inclusion-icon" title="Meals"><i class="fa-solid fa-utensils"></i></div>
-            <div class="inclusion-icon" title="SUV 4x4"><i class="fa-solid fa-truck-pickup"></i></div>
-            <div class="inclusion-icon" title="Private Cook"><i class="fa-solid fa-kitchen-set"></i></div>
-            <div class="inclusion-icon" title="First Aid"><i class="fa-solid fa-briefcase-medical"></i></div>
-          </div>
-          <div class="package-footer">
-            <div class="package-price">
-              <span class="price-label">Starts from</span>
-              <span class="price-value">₹19,999</span>
-              <span class="pax-count">per person</span>
-            </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="view-all-wrap">
-      <a href="ladakh.html" class="btn-view-all">View All Ladakh Packages <i class="fa-solid fa-chevron-right"></i></a>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       THINGS TO DO IN KASHMIR
-  ========================================================== -->
-  <section class="section-padding" style="background: var(--white);">
-    <div class="section-header">
-      <h2>Things to do in Kashmir</h2>
-      <p>Kashmir is not just a place, it's an experience. Here are the top 8 things you must do on your "Paradise"
-        vacation.</p>
-    </div>
-
-    <div class="activities-grid">
-      <!-- Activity 1 -->
-      <article class="activity-card">
-        <div class="activity-thumb">
-          <img src="images/shikara-ride.jpg" alt="Shikara Ride">
-        </div>
-        <div class="activity-content">
-          <h3>Shikara Ride</h3>
-          <p>Glide through the serene waters of Dal Lake. A romantic haven where time seems to stand still amidst
-            floating gardens.</p>
-        </div>
-      </article>
-
-      <!-- Activity 2 -->
-      <article class="activity-card">
-        <div class="activity-thumb">
-          <img src="images/gandola.jpg" alt="Gondola Ride">
-        </div>
-        <div class="activity-content">
-          <h3>Gondola Ride</h3>
-          <p>Ascend to 14,000 ft in Gulmarg. Witness the majestic Peer Panjal range from the world's highest cable car.
-          </p>
-        </div>
-      </article>
-
-      <!-- Activity 3 -->
-      <article class="activity-card">
-        <div class="activity-thumb">
-          <img src="images/betab-valley.webp" alt="Pahalgam Trek">
-        </div>
-        <div class="activity-content">
-          <h3>Betaab Valley</h3>
-          <p>Named after a Bollywood classic, walk through lush meadows surrounded by snow-capped peaks and the Lidder
-            River.</p>
-        </div>
-      </article>
-
-      <!-- Activity 4 -->
-      <article class="activity-card">
-        <div class="activity-thumb">
-          <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&q=80&w=800"
-            alt="Sonamarg Glaciers">
-        </div>
-        <div class="activity-content">
-          <h3>Thajiwas Glacier</h3>
-          <p>A short pony ride to eternal snow. Witness the "Meadow of Gold" where glaciers bleed into crystalline
-            streams.</p>
-        </div>
-      </article>
-
-      <!-- Activity 5 -->
-      <article class="activity-card">
-        <div class="activity-thumb">
-          <img src="images/mughal-garden.jfif" alt="Mughal Gardens">
-        </div>
-        <div class="activity-content">
-          <h3>Mughal Gardens</h3>
-          <p>Step into the royal past at Nishat and Shalimar Bagh. Terraced lawns and fountains designed for emperors.
-          </p>
-        </div>
-      </article>
-
-      <!-- Activity 6 -->
-      <article class="activity-card">
-        <div class="activity-thumb">
-          <img src="images/houseboat.jpg" alt="Houseboat Stay">
-        </div>
-        <div class="activity-content">
-          <h3>Houseboat Luxury</h3>
-          <p>Sleep in a floating palace of hand-carved cedar. Wake up to the gentle ripples and floating flower markets.
-          </p>
-        </div>
-      </article>
-
-      <!-- Activity 7 -->
-      <article class="activity-card">
-        <div class="activity-thumb">
-          <img src="images/saffron-farming.jpg" alt="Saffron Shopping">
-        </div>
-        <div class="activity-content">
-          <h3>Pampore Saffron</h3>
-          <p>Visit the "Saffron Town". Buy the world's most expensive spice and authentic Kashmiri hand-knotted carpets.
-          </p>
-        </div>
-      </article>
-
-      <!-- Activity 8 -->
-      <article class="activity-card">
-        <div class="activity-thumb">
-          <img src="images/Wular-Lake.jpg" alt="Wular Lake">
-        </div>
-        <div class="activity-content">
-          <h3>Wular Lake</h3>
-          <p>Explore Asia's largest freshwater lake. A paradise for birdwatchers and those seeking raw, untouched
-            nature.</p>
-        </div>
-      </article>
-    </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       JAVASCRIPT
-  ========================================================== -->
   <script>
-    const navbar = document.getElementById('navbar');
-    const hamburger = document.getElementById('hamburger');
-    const offcanvas = document.getElementById('offcanvas');
-    const overlay = document.getElementById('overlay');
-    const closeBtn = document.getElementById('offcanvasClose');
+    function filterPackages() {
+      const filterValue = document.getElementById('priceFilter').value;
+      const cards = document.querySelectorAll('.package-card');
+      let visibleCount = 0;
 
-    /* ---- Navbar scroll effect ---- */
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 30) {
-        navbar.classList.add('scrolled');
-        document.body.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-        document.body.classList.remove('scrolled');
-      }
-    }, { passive: true });
-
-    /* ---- Open off-canvas ---- */
-    function openCanvas() {
-      offcanvas.classList.add('open');
-      overlay.classList.add('active');
-      hamburger.classList.add('open');
-      hamburger.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    }
-
-    /* ---- Close off-canvas ---- */
-    function closeCanvas() {
-      offcanvas.classList.remove('open');
-      overlay.classList.remove('active');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-
-    hamburger.addEventListener('click', () => {
-      const isOpen = offcanvas.classList.contains('open');
-      isOpen ? closeCanvas() : openCanvas();
-    });
-
-    closeBtn.addEventListener('click', closeCanvas);
-    overlay.addEventListener('click', closeCanvas);
-
-    /* ---- Mobile Submenu Accordion ---- */
-    const mobileDropdowns = document.querySelectorAll('.offcanvas__dropdown-toggle');
-    mobileDropdowns.forEach(toggle => {
-      toggle.addEventListener('click', (e) => {
-        // Only prevent default if they click the chevron or it's just a toggle link
-        // Here we let it stay open if it's acting as a toggle. Since clicking normally navigates,
-        // we'll prevent default to let the user see the sub-menu.
-        e.preventDefault();
-        const parent = toggle.closest('.offcanvas__dropdown');
-        parent.classList.toggle('active');
-      });
-    });
-
-    /* ---- Keyboard: close on Escape ---- */
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeCanvas();
-    });
-
-    /* =========================================================
-       POPUP LOGIC
-    ========================================================== */
-    document.addEventListener('DOMContentLoaded', () => {
-      const bookingPopup = document.getElementById('bookingPopup');
-      const popupClose = document.getElementById('popupClose');
-      const bookingForm = document.getElementById('bookingForm');
-      const popupContent = document.getElementById('popupContent');
-      const popupSuccess = document.getElementById('popupSuccess');
-
-      if (!bookingPopup) return;
-
-      // Initialize elegantly styled flatpickr calendar
-      flatpickr("#popDate", {
-        altInput: true,
-        altFormat: "F j, Y",
-        dateFormat: "Y-m-d",
-        minDate: "today",
-        disableMobile: "true"
-      });
-
-      // Popup Controls with adjustable delay
-      function openPopup(delay = 0) {
-        if (delay > 0) {
-          setTimeout(() => {
-            bookingPopup.classList.add('show');
-            document.body.style.overflow = 'hidden';
-          }, delay);
+      cards.forEach(card => {
+        const price = parseInt(card.getAttribute('data-price'));
+        let show = false;
+        
+        if (filterValue === 'all') {
+          show = true;
         } else {
-          bookingPopup.classList.add('show');
-          document.body.style.overflow = 'hidden';
+          const maxPrice = parseInt(filterValue);
+          if (price <= maxPrice) show = true;
         }
+
+        if (show) {
+          card.style.display = 'block';
+          // Subtle animation
+          card.style.animation = 'fadeInUp 0.5s ease forwards';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    // Add keyframe dynamically
+    const styleSheet = document.createElement("style");
+    styleSheet.innerText = 
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
       }
-
-      function closePopup() {
-        bookingPopup.classList.remove('show');
-        document.body.style.overflow = '';
-      }
-
-      // Auto open with a slight delay on load
-      if (document.readyState === 'complete') {
-        openPopup(400);
-      } else {
-        window.addEventListener('load', () => openPopup(400));
-      }
-
-      popupClose.addEventListener('click', closePopup);
-      bookingPopup.addEventListener('click', (e) => {
-        if (e.target === bookingPopup) closePopup();
-      });
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && bookingPopup.classList.contains('show')) closePopup();
-      });
-
-      // Travelers +/- Logic
-      const btnMinus = document.getElementById('btnMinus');
-      const btnPlus = document.getElementById('btnPlus');
-      const popTravelers = document.getElementById('popTravelers');
-
-      btnMinus.addEventListener('click', () => {
-        let val = parseInt(popTravelers.value) || 1;
-        if (val > 1) popTravelers.value = val - 1;
-      });
-
-      btnPlus.addEventListener('click', () => {
-        let val = parseInt(popTravelers.value) || 1;
-        popTravelers.value = val + 1;
-      });
-
-      // Form Submission Logic
-      bookingForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        // Honeypot anti-spam check
-        const honeypot = document.getElementById('faxOnly').value;
-        if (honeypot) return; // Silently fail for bots without alarming them
-
-        const name = document.getElementById('popName').value;
-
-        // Hide form contents, show success state securely
-        popupContent.style.display = 'none';
-        popupSuccess.style.display = 'flex';
-
-        document.getElementById('successName').textContent = name || 'Traveler';
-      });
-
-      // Enable all "Book Now" buttons to open popup instantly
-      const bookBtns = document.querySelectorAll('.btn--book');
-      bookBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          openPopup(0); // Instant open on click
-        });
-      });
-
-      // Inline Form Logic
-      const inlineForm = document.getElementById('inlineInquiryForm');
-      if (inlineForm) {
-        flatpickr("#inlineDate", {
-          altInput: true,
-          altFormat: "F j, Y",
-          dateFormat: "Y-m-d",
-          minDate: "today",
-          disableMobile: "true"
-        });
-
-        const iBtnMinus = document.getElementById('inlineBtnMinus');
-        const iBtnPlus = document.getElementById('inlineBtnPlus');
-        const iTravelers = document.getElementById('inlineTravelers');
-
-        iBtnMinus.addEventListener('click', () => {
-          let val = parseInt(iTravelers.value) || 1;
-          if (val > 1) iTravelers.value = val - 1;
-        });
-
-        iBtnPlus.addEventListener('click', () => {
-          let val = parseInt(iTravelers.value) || 1;
-          iTravelers.value = val + 1;
-        });
-
-        inlineForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const honeypot = document.getElementById('faxOnlyInline').value;
-          if (honeypot) return;
-
-          const name = document.getElementById('inlineName').value;
-          inlineForm.style.display = 'none';
-          document.getElementById('inlineSuccess').style.display = 'block';
-          document.getElementById('inlineSuccessName').textContent = name || 'Traveler';
-        });
-      }
-
-      // Testimonial Carousel Logic
-      const track = document.getElementById('testiTrack');
-      const prevBtn = document.querySelector('.testi-prev');
-      const nextBtn = document.querySelector('.testi-next');
-      if (track && prevBtn && nextBtn) {
-        let cards = Array.from(track.children);
-        let currentIndex = 0;
-        let autoPlayInterval;
-
-        function getCardsPerView() {
-          if (window.innerWidth <= 550) return 1;
-          if (window.innerWidth <= 850) return 2;
-          if (window.innerWidth <= 1100) return 3;
-          return 4;
-        }
-
-        function updateCarousel() {
-          const cardsPerView = getCardsPerView();
-          const maxIndex = Math.max(0, cards.length - cardsPerView);
-          if (currentIndex > maxIndex) currentIndex = maxIndex;
-          if (currentIndex < 0) currentIndex = 0;
-
-          const cardWidth = cards[0].offsetWidth;
-          const gap = parseInt(window.getComputedStyle(track).gap) || 24;
-          track.style.transform = `translateX(-${currentIndex * (cardWidth + gap)}px)`;
-        }
-
-        function slideNext() {
-          const maxIndex = cards.length - getCardsPerView();
-          if (currentIndex < maxIndex) {
-            currentIndex++;
-          } else {
-            currentIndex = 0; // loop back
-          }
-          updateCarousel();
-          resetAutoplay();
-        }
-
-        function slidePrev() {
-          if (currentIndex > 0) {
-            currentIndex--;
-          } else {
-            currentIndex = cards.length - getCardsPerView(); // loop to end
-          }
-          updateCarousel();
-          resetAutoplay();
-        }
-
-        nextBtn.addEventListener('click', slideNext);
-        prevBtn.addEventListener('click', slidePrev);
-        window.addEventListener('resize', updateCarousel);
-
-        function resetAutoplay() {
-          clearInterval(autoPlayInterval);
-          autoPlayInterval = setInterval(slideNext, 4500);
-        }
-
-        // allow cards to render dimension before update
-        setTimeout(() => {
-          updateCarousel();
-          resetAutoplay();
-        }, 100);
-      }
-    });
-
+    ;
+    document.head.appendChild(styleSheet);
   </script>
-
-  <!-- =========================================================
-       POPUP HTML OVERLAY
-  ========================================================== -->
-  <div class="popup-overlay" id="bookingPopup">
+<div class="popup-overlay" id="bookingPopup">
     <div class="popup-card">
       <svg class="popup-border" viewBox="0 0 100 100" preserveAspectRatio="none">
         <rect x="0" y="0" width="100" height="100" pathLength="100" vector-effect="non-scaling-stroke"></rect>
@@ -4112,7 +3479,8 @@
   <!-- =========================================================
        GLOBAL FOOTER 
   ========================================================== -->
-  <footer class="footer">
+  
+<footer class="footer">
     <div class="footer__container">
       <div class="footer__brand">
         <a href="index.html" class="logo">
@@ -4158,8 +3526,44 @@
     </a>
   </div>
 
+<script>
+  function openPopup(delay = 0) {
+    const bookingPopup = document.getElementById('bookingPopup');
+    if(bookingPopup) {
+      if (delay > 0) {
+          setTimeout(() => {
+              bookingPopup.classList.add('show');
+              document.body.style.overflow = 'hidden';
+          }, delay);
+      } else {
+          bookingPopup.classList.add('show');
+          document.body.style.overflow = 'hidden';
+      }
+    }
+  }
+  function closePopup() {
+    const bookingPopup = document.getElementById('bookingPopup');
+    if(bookingPopup) {
+      bookingPopup.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    const popupClose = document.getElementById('popupClose');
+    if(popupClose) popupClose.addEventListener('click', closePopup);
+    const bookingPopup = document.getElementById('bookingPopup');
+    if(bookingPopup) {
+      bookingPopup.addEventListener('click', (e) => {
+        if(e.target === bookingPopup) closePopup();
+      });
+    }
+  });
+</script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
 
 </html>
+
+
+
