@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -2028,6 +2028,69 @@
       .form-row:has(#popDate)>.form-group:first-child {
         grid-column: 1 / -1;
       }
+
+      /* ---- About Page Mobile Overrides ---- */
+
+      /* "Who We Are" two-column grid → single column */
+      .about-content-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+
+      /* Stats grid: 2 columns on mobile */
+      .about-stats-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1.5rem !important;
+        padding: 2rem 1.2rem !important;
+        margin-bottom: 3rem !important;
+      }
+
+      /* Image badge repositioning on mobile */
+      .about-image-content > div[style*="position: absolute"] {
+        position: static !important;
+        margin-top: 1rem;
+        left: auto !important;
+        bottom: auto !important;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        border-radius: 10px;
+        padding: 1rem !important;
+      }
+
+      /* Tab inner boxes: force column */
+      .tab-inner-box {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        padding: 1.5rem !important;
+      }
+
+      /* Make images in tabs full-width */
+      .tab-inner-box > div[style*="flex: 1"] img {
+        height: 200px !important;
+        width: 100% !important;
+      }
+
+      /* Tab content text sections */
+      .tab-inner-box > div[style*="flex: 1"] {
+        flex: none !important;
+        width: 100% !important;
+      }
+
+      /* About hero title */
+      .about-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .about-hero p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      /* Stats grid → single column on very small screens */
+      .about-stats-grid {
+        grid-template-columns: 1fr !important;
+      }
     }
   </style>
 </head>
@@ -2242,7 +2305,7 @@
         </div>
       </div>
 
-      <div
+      <div class="about-stats-grid"
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; background: var(--dark); border-radius: 16px; padding: 3rem; margin-top: 2rem; margin-bottom: 5rem; color: var(--white); box-shadow: 0 20px 40px rgba(0,0,0,0.1); position: relative; z-index: 10;">
         <div style="text-align: center;">
           <div
@@ -2466,6 +2529,22 @@
       });
     });
 
+    /* ---- Popup open/close (Book Now CTA) ---- */
+    function openPopup() {
+      const overlay = document.getElementById('popupOverlay');
+      if (overlay) {
+        overlay.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closePopup() {
+      const overlay = document.getElementById('popupOverlay');
+      if (overlay) {
+        overlay.classList.remove('show');
+        document.body.style.overflow = '';
+      }
+    }
   </script>
 
   <!-- =========================================================
