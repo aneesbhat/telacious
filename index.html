@@ -1,12 +1,59 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Telacious Tour & Travels â€“ Explore the world with our handcrafted travel packages. Unforgettable journeys await you." />
-  <title>Telacious Tour & Travels</title>
+    content="Telacious Tour & Travels - Best travel agency in Srinagar offering premium Kashmir tour packages, Leh Ladakh bike trips, and Vaishno Devi yatra packages. Book your dream vacation with expert local guides." />
+  <meta name="keywords" content="Kashmir tour packages, Srinagar travel agency, Leh Ladakh tour, Vaishno Devi yatra, Gulmarg honeymoon package, Kashmir trip cost, Telacious Tour and Travels" />
+  <meta name="robots" content="index, follow" />
+  <title>Telacious Tour & Travels | Best Kashmir, Ladakh & Vaishno Devi Packages</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Telacious Tour & Travels",
+    "image": "https://telacioustourandtravels.com/images/logo.png",
+    "@id": "https://telacioustourandtravels.com",
+    "url": "https://telacioustourandtravels.com",
+    "telephone": "+91 7006080531",
+    "email": "Telacioustourandtravel@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Eidgah",
+      "addressLocality": "Srinagar",
+      "postalCode": "190002",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/1Cd9LGcweH/",
+      "https://www.instagram.com/telacious.trips?utm_source=qr&igsh=cndlZmEycW96MW92"
+    ]
+  }
+  </script>
 
   <!-- Google Fonts -->
   <link
@@ -24,7 +71,7 @@
 
   <style>
     /* ============================================================
-       CSS CUSTOM PROPERTIES â€“ Brand Color System
+       CSS CUSTOM PROPERTIES '“ Brand Color System
     ============================================================ */
     :root {
       --primary: #0EA5E9;
@@ -209,9 +256,7 @@
       /* Matches joyous blueish/dark theme */
     }
 
-    .navbar.scrolled .hamburger span {
-      background: var(--primary);
-    }
+
 
     .navbar__inner {
       width: 100%;
@@ -301,7 +346,7 @@
       transition: color 0.28s ease, letter-spacing 0.28s ease, transform 0.28s ease;
     }
 
-    /* Glow pill background â€“ slides up from bottom */
+    /* Glow pill background '“ slides up from bottom */
     .nav-links a::before {
       content: '';
       position: absolute;
@@ -541,6 +586,11 @@
       background: var(--white);
       transition: transform var(--transition), opacity var(--transition), width var(--transition);
       transform-origin: center;
+      pointer-events: none;
+    }
+
+    .navbar.scrolled .hamburger span {
+      background: var(--primary-dark) !important;
     }
 
     .hamburger.open span:nth-child(1) {
@@ -1338,14 +1388,13 @@
     /* Popup Content Restoration */
     .popup-brand-name {
       font-family: 'Cinzel', serif;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-weight: 700;
-      color: #10B981;
+      color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       text-align: center;
       margin: 0;
-      text-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
     }
 
     .popup-discount {
@@ -2028,6 +2077,11 @@
       background: var(--accent);
     }
 
+    /* .float-btn__text removed as per user request for circular shape */
+    .float-btn__text {
+      display: none;
+    }
+
     /* =========================================================
        PACKAGE & ACTIVITY SECTIONS
     ========================================================== */
@@ -2674,7 +2728,7 @@
 <body>
 
   <!-- =========================================================
-       OVERLAY â€“ off-canvas backdrop
+       OVERLAY '“ off-canvas backdrop
   ========================================================== -->
   <div class="overlay" id="overlay" aria-hidden="true"></div>
 
@@ -2683,10 +2737,9 @@
   ========================================================== -->
   <div class="top-bar">
     <div class="top-bar__socials">
-      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-      <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.instagram.com/telacious.trips?utm_source=qr&igsh=cndlZmEycW96MW92" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/1Cd9LGcweH/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://wa.me/917006080531" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
   </div>
 
@@ -2697,9 +2750,9 @@
     <div class="navbar__inner">
 
       <!-- Logo -->
-      <a href="index.html" class="logo" aria-label="Telacious Tour & Travels â€“ Home">
+      <a href="index.html" class="logo" aria-label="Telacious Tour & Travels '“ Home">
         <div class="logo__icon" aria-hidden="true">
-          <img src="images/logo without bg.png" alt="Telacious Tour & Travels">
+          <img src="images/logo without bg.png" alt="Telacious Tour and Travels" alt="Telacious Tour & Travels">
         </div>
         <div class="logo__text">
           <span>Telacious Tour</span>
@@ -2713,7 +2766,7 @@
               Home</span><span class="dot-indicator"></span></a></li>
         <li><a href="about.html"><i class="fa-solid fa-users"></i><span class="nav-text"> About Us</span></a></li>
         <li class="dropdown">
-          <a href="packages.html" aria-haspopup="true" aria-expanded="false">
+          <a href="index.html#packages" aria-haspopup="true" aria-expanded="false">
             <i class="fa-solid fa-suitcase-rolling"></i>
             <span class="nav-text"> Packages</span>
             <i class="fa-solid fa-chevron-down"></i>
@@ -2761,7 +2814,7 @@
     <div class="offcanvas__header">
       <div class="offcanvas__brand">
         <div class="logo__icon" aria-hidden="true">
-          <img src="images/logo.png" alt="Telacious Tour & Travels" style="height: 48px; object-fit: contain;">
+          <img src="images/logo.png" alt="Telacious Tour and Travels Logo" alt="Telacious Tour & Travels" style="height: 48px; object-fit: contain;">
         </div>
         <div class="logo__text">
           <span>Telacious Tour</span>
@@ -2802,9 +2855,6 @@
           <a href="ladakh.html" onclick="closeCanvas()">
             <i class="fa-solid fa-motorcycle"></i> Ladakh
           </a>
-          <a href="packages.html" onclick="closeCanvas()">
-            <i class="fa-solid fa-arrow-right"></i> View All Packages
-          </a>
         </div>
       </div>
 
@@ -2826,10 +2876,10 @@
     <div class="offcanvas__footer">
       <p>Follow us on social media</p>
       <div class="offcanvas__socials">
-        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.instagram.com/telacious.trips?utm_source=qr&igsh=cndlZmEycW96MW92" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1Cd9LGcweH/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://wa.me/917006080531" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        
       </div>
     </div>
 
@@ -2848,13 +2898,13 @@
         </div>
 
         <h1 class="hero__title" id="heroTitle">
-          Explore the World<br />
-          with <span class="highlight">Telacious</span>
+          Premium <strong>Kashmir Tour Packages</strong><br />
+          & <strong>Ladakh Adventures</strong> with <span class="highlight">Telacious</span>
         </h1>
 
         <p class="hero__quote" role="doc-subtitle">
-          &ldquo;Not all those who <strong>wander</strong> are lost &mdash;
-          some are just <strong>discovering</strong> the world&rsquo;s finest moments with us.&rdquo;
+          “Not all those who <strong>wander</strong> are lost —
+          some are just <strong>discovering</strong> the world's finest moments with us.”
         </p>
 
         <div class="hero__info-bar">
@@ -2887,7 +2937,7 @@
         </div>
 
         <div class="hero__actions">
-          <a href="packages.html" class="btn btn--primary">
+          <a href="#packages" class="btn btn--primary">
             <i class="fa-solid fa-suitcase-rolling"></i>
             Explore Packages
           </a>
@@ -2999,7 +3049,7 @@
               <span class="price-value">₹28,500</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
@@ -3038,7 +3088,7 @@
               <span class="price-value">₹26,999</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
@@ -3077,7 +3127,7 @@
               <span class="price-value">₹15,999</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
@@ -3134,7 +3184,7 @@
               <span class="price-value">₹25,999</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
@@ -3173,7 +3223,7 @@
               <span class="price-value">₹18,999</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
@@ -3198,7 +3248,7 @@
           <h3>Shiv Khori Combo</h3>
           <div class="package-meta">
             <span><i class="fa-solid fa-clock"></i> 7 Days / 6 Nights</span>
-            <span><i class="fa-solid fa-location-dot"></i> Katra, Pahalgam, Srinagar, Gulmarg</span>
+            <span><i class="fa-solid fa-location-dot"></i> Katra, Shiv Khori, Pahalgam, Srinagar, Gulmarg</span>
           </div>
           <div class="package-inclusions">
             <div class="inclusion-icon" title=""><i class="fa-solid fa-utensils"></i></div>
@@ -3212,7 +3262,7 @@
               <span class="price-value">₹22,999</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
@@ -3269,7 +3319,7 @@
               <span class="price-value">₹36,999</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
@@ -3308,7 +3358,7 @@
               <span class="price-value">₹27,999</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
@@ -3347,7 +3397,7 @@
               <span class="price-value">₹19,999</span>
               <span class="pax-count">per person</span>
             </div>
-            <a href="#" class="btn--book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="btn--book" onclick="openPopup(0); return false;">Book Now <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
@@ -3473,69 +3523,108 @@
        JAVASCRIPT
   ========================================================== -->
   <script>
-    const navbar = document.getElementById('navbar');
-    const hamburger = document.getElementById('hamburger');
-    const offcanvas = document.getElementById('offcanvas');
-    const overlay = document.getElementById('overlay');
-    const closeBtn = document.getElementById('offcanvasClose');
-
-    /* ---- Navbar scroll effect ---- */
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 30) {
-        navbar.classList.add('scrolled');
-        document.body.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-        document.body.classList.remove('scrolled');
-      }
-    }, { passive: true });
-
     /* ---- Open off-canvas ---- */
     function openCanvas() {
-      offcanvas.classList.add('open');
-      overlay.classList.add('active');
-      hamburger.classList.add('open');
-      hamburger.setAttribute('aria-expanded', 'true');
+      const offcanvas = document.getElementById('offcanvas');
+      const overlay = document.getElementById('overlay');
+      const hamburger = document.getElementById('hamburger');
+      if (offcanvas) offcanvas.classList.add('open');
+      if (overlay) overlay.classList.add('active');
+      if (hamburger) {
+        hamburger.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+      }
       document.body.style.overflow = 'hidden';
     }
 
     /* ---- Close off-canvas ---- */
     function closeCanvas() {
-      offcanvas.classList.remove('open');
-      overlay.classList.remove('active');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
+      const offcanvas = document.getElementById('offcanvas');
+      const overlay = document.getElementById('overlay');
+      const hamburger = document.getElementById('hamburger');
+      if (offcanvas) offcanvas.classList.remove('open');
+      if (overlay) overlay.classList.remove('active');
+      if (hamburger) {
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
       document.body.style.overflow = '';
     }
 
-    hamburger.addEventListener('click', () => {
-      const isOpen = offcanvas.classList.contains('open');
-      isOpen ? closeCanvas() : openCanvas();
-    });
+    document.addEventListener('DOMContentLoaded', () => {
+      const navbar = document.getElementById('navbar');
+      const hamburger = document.getElementById('hamburger');
+      const offcanvas = document.getElementById('offcanvas');
+      const overlay = document.getElementById('overlay');
+      const closeBtn = document.getElementById('offcanvasClose');
 
-    closeBtn.addEventListener('click', closeCanvas);
-    overlay.addEventListener('click', closeCanvas);
+      /* ---- Navbar scroll effect ---- */
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 30) {
+          if (navbar) navbar.classList.add('scrolled');
+          document.body.classList.add('scrolled');
+        } else {
+          if (navbar) navbar.classList.remove('scrolled');
+          document.body.classList.remove('scrolled');
+        }
+      }, { passive: true });
 
-    /* ---- Mobile Submenu Accordion ---- */
-    const mobileDropdowns = document.querySelectorAll('.offcanvas__dropdown-toggle');
-    mobileDropdowns.forEach(toggle => {
-      toggle.addEventListener('click', (e) => {
-        // Only prevent default if they click the chevron or it's just a toggle link
-        // Here we let it stay open if it's acting as a toggle. Since clicking normally navigates,
-        // we'll prevent default to let the user see the sub-menu.
-        e.preventDefault();
-        const parent = toggle.closest('.offcanvas__dropdown');
-        parent.classList.toggle('active');
+      if (hamburger) {
+        hamburger.addEventListener('click', () => {
+          const oc = document.getElementById('offcanvas');
+          const isOpen = oc && oc.classList.contains('open');
+          isOpen ? closeCanvas() : openCanvas();
+        });
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closeCanvas);
+      if (overlay) overlay.addEventListener('click', closeCanvas);
+
+      /* ---- Mobile Submenu Accordion ---- */
+      document.querySelectorAll('.offcanvas__dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+          e.preventDefault();
+          const parent = toggle.closest('.offcanvas__dropdown');
+          if (parent) parent.classList.toggle('active');
+        });
+      });
+
+      /* ---- Keyboard: close on Escape ---- */
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeCanvas();
+          if (typeof closePopup === 'function') closePopup();
+        }
       });
     });
 
-    /* ---- Keyboard: close on Escape ---- */
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeCanvas();
-    });
+    /* =========================================================
+       GLOBAL POPUP ACCESSors (for inline onclicks)
+    ========================================================== */
+    function openPopup(delay = 0) {
+      const bookingPopup = document.getElementById('bookingPopup');
+      if (!bookingPopup) return;
+      if (delay > 0) {
+        setTimeout(() => {
+          bookingPopup.classList.add('show');
+          document.body.style.overflow = 'hidden';
+        }, delay);
+      } else {
+        bookingPopup.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closePopup() {
+      const bookingPopup = document.getElementById('bookingPopup');
+      if (bookingPopup) {
+        bookingPopup.classList.remove('show');
+        document.body.style.overflow = '';
+      }
+    }
 
     /* =========================================================
-       POPUP LOGIC
+       CORE INTERACTIVE LOGIC
     ========================================================== */
     document.addEventListener('DOMContentLoaded', () => {
       const bookingPopup = document.getElementById('bookingPopup');
@@ -3554,24 +3643,6 @@
         minDate: "today",
         disableMobile: "true"
       });
-
-      // Popup Controls with adjustable delay
-      function openPopup(delay = 0) {
-        if (delay > 0) {
-          setTimeout(() => {
-            bookingPopup.classList.add('show');
-            document.body.style.overflow = 'hidden';
-          }, delay);
-        } else {
-          bookingPopup.classList.add('show');
-          document.body.style.overflow = 'hidden';
-        }
-      }
-
-      function closePopup() {
-        bookingPopup.classList.remove('show');
-        document.body.style.overflow = '';
-      }
 
       // Auto open with a slight delay on load
       if (document.readyState === 'complete') {
@@ -3821,7 +3892,7 @@
   <section class="testimonials" style="background: var(--light-bg); text-align:center;">
     <div class="section-header">
       <h2>Traveler Stories</h2>
-      <p style="color: #9ca3af !important;">Don't just take our word for itâ€”see what our travelers have to say about
+      <p style="color: #9ca3af !important;">Don't just take our word for it—see what our travelers have to say about
         their experiences.</p>
     </div>
 
@@ -4117,15 +4188,15 @@
       <div class="footer__brand">
         <a href="index.html" class="logo">
           <div class="logo__icon">
-            <img src="images/logo.png" alt="Telacious Tour & Travels">
+            <img src="images/logo.png" alt="Telacious Tour and Travels Logo" alt="Telacious Tour & Travels">
           </div>
           <div class="logo__text">
             <span>Telacious Tour</span>
             <span>&amp; Travels</span>
           </div>
         </a>
-        <p>&ldquo;Not all those who wander are lost &mdash; some are just discovering the worldâ€™s finest moments with
-          us.&rdquo;</p>
+        <p>“Not all those who wander are lost — some are just discovering the world's finest moments with
+          us.”</p>
       </div>
       <div class="footer__links">
         <h3>Quick Links</h3>
@@ -4135,10 +4206,11 @@
         <a href="refund-policy.html"><i class="fa-solid fa-money-bill-transfer"></i> Refund Policy</a>
       </div>
       <div class="footer__contact">
-        <h3>Contact</h3>
-        <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
-        <p><i class="fa-solid fa-envelope"></i> info@telacioustour.com</p>
-        <p><i class="fa-solid fa-location-dot"></i> Srinagar, Kashmir, 190001</p>
+        <h3>Contact Info</h3>
+        <p><i class="fa-solid fa-phone"></i> +91 7006080531</p>
+        <p><i class="fa-solid fa-envelope"></i> Telacioustourandtravel@gmail.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> Eidgah, Srinagar, 190002</p>
+        <p><i class="fa-solid fa-clock"></i> Working Hours: 24/7 Hours</p>
       </div>
     </div>
     <div class="footer__bottom">
@@ -4150,10 +4222,10 @@
   </footer>
 
   <div class="floating-actions">
-    <a href="tel:+919876543210" class="float-btn float-btn--call" aria-label="Call Us">
+    <a href="tel:+917006080531" class="float-btn float-btn--call" aria-label="Call +91 7006080531">
       <i class="fa-solid fa-phone"></i>
     </a>
-    <a href="https://wa.me/919876543210" class="float-btn float-btn--whatsapp" target="_blank" aria-label="WhatsApp Us">
+    <a href="https://wa.me/917006080531" class="float-btn float-btn--whatsapp" target="_blank" aria-label="WhatsApp Us +91 7006080531">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
   </div>
